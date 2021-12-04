@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  {% if title %}
+  <title>{{ title }} · Flask Test</title>
+  {% else %}
+  <title>Welcome to my amazing Flask Test</title>
+  {% endif %}
+  <link rel="stylesheet" href="static/styles/20210503.css" />
+</head>
+
+<body>
+  <div>
+    <ul ID="navbar">
+      <li><a href="/index">Home</a></li>
+      <li><a href="/power">Power</a></li>
+      <li><a href="/temp">Temp</a></li>
+      <li><a href="/coin">Coin</a></li>
+    </ul>
+  </div <hr>
+  {% block content %}{% endblock %}
+</body>
+
+</html>

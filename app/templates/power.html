@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Hi, {{ user.username }}!</h1>
+<table style='font-family: monospace;' cellpadding='4' cellspacing='4'>
+    <thead>
+        <td>Time</td>
+        <td>Current</td>
+        <td>Voltage</td>
+        <td>Power</td>
+        <td>Percent</td>
+    </thead>
+    {% for datum in data %}
+    <tr>
+        <td>{{ datum.time }}</td>
+        <td>{{ datum.current }}</td>
+        <td>{{ datum.voltage }}</td>
+        <td>{{ datum.power }}</td>
+        <td>{{ datum.percent }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

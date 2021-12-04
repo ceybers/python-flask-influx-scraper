@@ -1,0 +1,70 @@
+:root {
+    --primary-fg-color : #f9e7c4;
+    --primary-bg-color : #353433;
+    --secondary-fg-color : #81755d;
+    --secondary-bg-color : #2C2B2A;
+    --dimmed-color : #48443D;
+    --very-dim-color : #48443D;
+    --accent-main : #A03C33;
+}
+
+* {    
+    padding : 0;
+    margin : 0;
+    box-sizing : border-box;
+}
+
+BODY {
+    font-family :'Fira Code', monospace;     
+    /* font-size : 100%; */
+    margin : 1em;
+
+    /* letter-spacing : 0.03em;     */
+    background : var(--primary-bg-color);
+    color : var(--primary-fg-color);
+
+    zzzdisplay : grid;
+    /* grid-auto-columns: 1fr calc(360px + 80ch) 1fr; */
+    zzzgrid-auto-columns: 1fr auto 1fr;
+}
+
+A, A:Hover, A:Active, A:Visited {
+    color : var(--primary-fg-color);
+    text-decoration : none;
+}
+
+TD {
+    padding : 1em;
+}
+/* --- */
+
+UL#navbar {
+    /* border : 1px solid cyan; */
+    list-style-type : none;
+    display : flex;
+    flex-wrap : wrap;
+    justify-content: center;
+    width : 90vw;
+}
+
+UL#navbar > LI {
+    /* flex : 1 1 5em;        */
+    user-select: none;        
+}
+
+UL#navbar > LI > A { 
+    text-decoration :none;    
+    background : #2C2B2A;
+    border : 0.5em solid #353433;
+    transition: 0.25s;
+    display : inline-block;
+    min-width : 10em;
+    padding-top:1em;
+    padding-bottom:1em;
+    text-align :center;
+}
+
+UL#navbar > LI > A:Hover { 
+    background : #A03C33;
+    transition: 0.75s;
+}

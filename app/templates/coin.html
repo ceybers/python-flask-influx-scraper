@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Coin Spot Prices</h1>
+<table style='font-family: monospace;' cellpadding='4' cellspacing='4'>
+    <thead>
+        <td>Time</td>
+        <td>Coin</td>
+        <td>Spot Price</td>
+    </thead>
+    {% for c in data %}
+    <tr>
+        <td>{{ c.time }}</td>
+        <td>{{ c.coin }}</td>
+        <td>{{ c.spotPrice }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

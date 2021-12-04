@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Temperature</h1>
+<table style='font-family: monospace;' cellpadding='4' cellspacing='4'>
+    <thead>
+        <td>Time</td>
+        <td>Sensor</td>
+        <td>Temp</td>
+    </thead>
+    {% for d in data %}
+    <tr>
+        <td>{{ d.time }}</td>
+        <td>{{ d.sensor }}</td>
+        <td>{{ d.value }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
